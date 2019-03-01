@@ -1,11 +1,11 @@
 from flask import request, Blueprint, jsonify, current_app,make_response
-from tokenleader.app1.catalog import catalog_functions as cf 
+from tokenleader.app1.catalog import catalog_functions as cf , catalog_bp
 from tokenleaderclient.configs.config_handler import Configs    
 from tokenleaderclient.client.client import Client 
 from tokenleaderclient.rbac.enforcer import Enforcer
 from tokenleader.app1.adminops.adminops_restapi import adminops_bp
 
-catalog_bp = Blueprint('catalog_bp', __name__)
+
 auth_config = Configs()
 tlclient = Client(auth_config)
 enforcer = Enforcer(tlclient)
