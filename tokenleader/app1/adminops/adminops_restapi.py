@@ -50,4 +50,10 @@ def delete_user_restapi(username):
     status = af.delete_user(username)
     response_obj = {"status": status}
     return jsonify(response_obj)
+    
+@adminops_bp.route('/list/org', methods=['GET'])
+def list_org_restapi():   
+    status = af.list_org()
+    response_obj = {"status": status}
+    return jsonify(response_obj)
 
