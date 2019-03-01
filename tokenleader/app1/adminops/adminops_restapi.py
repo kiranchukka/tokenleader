@@ -53,8 +53,8 @@ def delete_user_restapi(username):
     
 @adminops_bp.route('/list/org', methods=['GET'])
 def list_org_restapi():   
-    obj = af.list_org()
-    ogj_json = {"name": obj.name}
+    org_dict = af.list_org()
+    ogj_json = {"name": org_dict.get('name')}
     response_obj = {"status": ogj_json}
     return jsonify(response_obj)
 
