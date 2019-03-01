@@ -174,7 +174,7 @@ def list_ops(obj, cname=None, *args, **kwargs):
                 result = record.to_dict()
                 print(result)
             else: 
-                result = {'id': record.id, 'name': record.name , 'record': record}
+                result = {'id': record.id, 'name': record.name }
                 print(result)
         else:
             result = {'error': 'No such record is found'}
@@ -198,7 +198,7 @@ def list_ops(obj, cname=None, *args, **kwargs):
                 result = record_list_of_dict
                 print(result)
             else:            
-                result = {'id': record.id, 'name': record.name , 'record': record}
+                result = {'id': record.id, 'name': record.name }
                 print(result)                
 #         print('i am on the final result {}'.format(result))        
         return result  
